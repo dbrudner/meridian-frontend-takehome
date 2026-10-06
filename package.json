@@ -1,0 +1,35 @@
+{
+  "name": "gridline-frontend-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Take-home assessment for front-end engineering candidates: a mock API plus a React starter.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "start": "concurrently -n api,web -c cyan,magenta -k \"node server.js\" \"vite client\"",
+    "dev": "concurrently -n api,web -c cyan,magenta -k \"node --watch server.js\" \"vite client\"",
+    "build": "tsc -b client && vite build client",
+    "preview": "vite preview client",
+    "lint": "oxlint client"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^9.1.0",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
